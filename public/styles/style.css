@@ -1,0 +1,42 @@
+.add2{
+    display: none;
+}
+
+@media (max-width: 770px){
+
+    .header-top{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .title{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .btns{
+        display: flex;
+    }
+
+    .add{
+        display: none;
+    }
+
+    .add2{
+        display: block;
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .delAll{
+        width: 120px;
+    }
+    
+    
+}
