@@ -9,7 +9,7 @@ function cleanInput() {
 }
 
 function uptadePosts() {
-    fetch("http://192.168.0.170:3000/api/all").then(res => {
+    fetch("/api/all").then(res => {
         return res.json();
     }).then(json => {
         let postElements = '';
@@ -51,7 +51,7 @@ function newPost() {
 
     if (title || description != '') {
         //passei o options para dizer que esse é um metodo POST e não GET
-        fetch("http://192.168.0.170:3000/api/new", options);
+        fetch("/api/new", options);
         uptadePosts();
         cleanInput();
     };
@@ -65,7 +65,7 @@ function del(close) {
         method: "DELETE"
     };
 
-    fetch(`http://192.168.0.170:3000/api/delete/${id_externo}`, options)
+    fetch(`/api/delete/${id_externo}`, options)
 
     uptadePosts();
 
@@ -76,6 +76,6 @@ function delAll(){
         method: "DELETE"
     };
 
-    fetch("http://192.168.0.170:3000/api/deleteall", options);
+    fetch("/api/deleteall", options);
     uptadePosts();
 }
